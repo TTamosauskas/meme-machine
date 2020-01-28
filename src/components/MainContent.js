@@ -4,7 +4,14 @@ function MainContent(){
 return (
  
 <main>
-  <p>lalalalla</p>
+  <input type="checkbox" />
+  <p>primeiro item</p>
+
+  <input type="checkbox" />
+  <p>primeiro item</p>
+
+  <input type="checkbox" />
+  <p>primeiro item</p>
 </main>
 )
 }

@@ -2,10 +2,8 @@ import React from "react"
 
 function Header(){
 return (
-  <h1>Titulo</h1>
+  <header className="headertitle">Titulo</header>
 )
-
-
 }
 
 export default Header
