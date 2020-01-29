@@ -3,22 +3,23 @@ import React from 'react';
 function MyInfo() {
   const firstName = 'Bob';
   const lastName = 'Dobbs';
-  const date = new Date();
+  const date = new Date(2020, 12, 31, 19);
   const hours = date.getHours();
   let timeOfDay;
+  const styles = {
+    fontSize: 24,
+  };
 
   if (hours < 12) {
     timeOfDay = 'um bom dia';
+    styles.color = '#84756F';
   } else if (hours >= 12 && hours < 17) {
     timeOfDay = 'uma boa tarde';
+    styles.color = '#2E0927';
   } else {
     timeOfDay = 'uma boa noite';
+    styles.color = '#D90880';
   }
-
-  const styles = {
-    color: '#ff9c88',
-    backgroundColor: 'red',
-  };
 
   return (
     <div>
