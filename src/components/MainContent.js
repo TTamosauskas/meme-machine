@@ -1,19 +1,17 @@
-import React from "react"
+import React from 'react';
+import ToDoItem from './ToDo';
 
-function MainContent(){
-return (
- 
-<main>
-  <input type="checkbox" />
-  <p>primeiro item</p>
-
-  <input type="checkbox" />
-  <p>primeiro item</p>
-
-  <input type="checkbox" />
-  <p>primeiro item</p>
-</main>
-)
+function MainContent() {
+  return (
+    <main>
+      <div className="todo-list">
+        <ToDoItem />
+        <ToDoItem />
+        <ToDoItem />
+        <ToDoItem />
+      </div>
+    </main>
+  );
 }
 
-export default MainContent
+export default MainContent;
