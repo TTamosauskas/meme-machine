@@ -11,6 +11,10 @@ function Joke(props) {
       <p style={{ color: !props.question ? '#FF6600' : '#000' }}>
         {props.punchline}
       </p>
+      <p>
+        <input type="checkbox" checked={props.funy} />
+        <label>Achei Engraçado {props.name}</label>
+      </p>
     </div>
   );
 }
