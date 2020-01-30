@@ -1,36 +1,41 @@
 import React from 'react';
-import ContactCard from './ContactCard';
+import Joke from './Joke';
 
 function MainContent() {
   return (
     <main>
-      <div className="todo-list">
-        <ContactCard
-          name="Gatinho Fofo"
-          imgUrl="http://placekitten.com/400/200"
-          phone="(11) 9999-9999"
-          email="fofo@gatinho.com"
+      <div className="kitten-list">
+        <Joke
+          joke={{
+            name: 'Senhor Fofura',
+            imgURL: 'http://placekitten.com/400/200',
+            question: 'Porque a galinha atravessou a rua?',
+            punchline: 'Para chegar do outro lado!',
+          }}
         />
-
-        <ContactCard
-          name="Lucy"
-          imgUrl="http://placekitten.com/450/200"
-          phone="(11) 8888-9999"
-          email="lucy@gatinho.com"
+        <Joke
+          joke={{
+            name: 'Bolinha de Pelo',
+            imgURL: 'http://placekitten.com/401/201',
+            question: 'Porque o bombeiro usa suspensóorio vermelho?',
+            punchline: 'Para as calças não cairem!',
+          }}
         />
-
-        <ContactCard
-          name="Garfield"
-          imgUrl="http://placekitten.com/600/200"
-          phone="(11) 777777-9999"
-          email="lasanha@gatinho.com"
+        <Joke
+          joke={{
+            name: 'Lucy Liins',
+            imgURL: 'http://placekitten.com/399/199',
+            question: 'O que cai de pé e corre deitado?',
+            punchline: 'A chuva!',
+          }}
         />
-
-        <ContactCard
-          name="Max hedron"
-          imgUrl="http://placekitten.com/210/200"
-          phone="(11) 5555-9999"
-          email="max@gatinho.com"
+        <Joke
+          joke={{
+            name: 'Maestro',
+            imgURL: 'http://placekitten.com/402/202',
+            question: 'Como um elefante se suicida?',
+            punchline: 'Enfia a tromba no bumbum e assopra!',
+          }}
         />
       </div>
     </main>

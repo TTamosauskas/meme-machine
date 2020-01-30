@@ -25,33 +25,32 @@ code {
   align-items:center;
   }
 
-  .todo-list{
+  .kitten-list{
     background-color:white;
     margin:auto;
-    width:50%;
+    width:90%;
     display:flex;
-    flex-direction:column;
-    align-items: center;
+    flex-direction:row;
     border:1px solid #efefef;
-    box-shaddow:
-      0 1px 1px rgba(0,0,0,0,15),
-      0 10px 0 -5px #eee,
-      0 10px 1px -4px rgba(0,0,0,0,15),
-      0 20px 0 -10px #eee,
-      0 20px 1px -9px rgba(0,0,0,0,15);
-    padding:30px}
+    padding:30px;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   align-items:flex-start;
+  }
 
-  .todo-item {
-    display:flex;
-    justify-content: flex-start;
+  .joke {
     align-items:center;
     padding:30px 20px 0;
-    width:70%;
-    border-bottom:1px solid #cecece;
+    width:30%;
+    overflow: hidden;
+    border:1px solid #cecece;
+    border-radius: 10;
     font-family: Roboto, sans-serif;
     font-weight:100;
+    margin:5px;
+    flex-grow:1;
     font-size:15px;
-    color:#333333
+    color:#333333;
   }
 
   input[type=checkbox]{
