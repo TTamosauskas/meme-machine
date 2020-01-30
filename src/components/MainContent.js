@@ -16,6 +16,13 @@ function MainContent() {
         <Joke
           joke={{
             name: 'Bolinha de Pelo',
+            imgURL: 'http://placekitten.com/405/204',
+            punchline: '10% de dez conto é 5 reais!',
+          }}
+        />
+        <Joke
+          joke={{
+            name: 'Bolinha de Pelo',
             imgURL: 'http://placekitten.com/401/201',
             question: 'Porque o bombeiro usa suspensóorio vermelho?',
             punchline: 'Para as calças não cairem!',

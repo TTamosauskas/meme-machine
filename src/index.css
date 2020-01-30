@@ -47,10 +47,13 @@ code {
     border-radius: 10;
     font-family: Roboto, sans-serif;
     font-weight:100;
+    height:auto;
     margin:5px;
     flex-grow:1;
     font-size:15px;
     color:#333333;
+    flex-shrink: 1;
+flex-basis: auto;
   }
 
   input[type=checkbox]{
