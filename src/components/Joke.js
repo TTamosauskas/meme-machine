@@ -1,30 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function sadCat() {
-  alert('oi');
+class Joke extends Component {
+  constructor() {
+    super();
+    this.state = {
+      likes: 0,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => {
+      return {
+        likes: prevState.likes + 1,
+      };
+    });
+  }
+
+  render() {
+    return (
+      <div className="joke">
+        <img alt={this.props.name} src={this.props.imgURL} />
+        <h3>Piada do {this.props.name}</h3>
+        <p style={{ display: this.props.question ? 'block' : 'none' }}>
+          {this.props.question}
+        </p>
+        <p style={{ color: !this.props.question ? '#FF6600' : '#000' }}>
+          {this.props.punchline}
+        </p>
+        <p>{this.state.likes} likes</p>
+        <p>
+          <input
+            type="checkbox"
+            onChange={this.handleClick}
+            checked={this.props.funy}
+          />
+          <label>Achei Engraçado {this.props.name}</label>
+        </p>
+      </div>
+    );
+  }
 }
-
-function meAmar() {
-  alert('Tem que me amar!');
-}
-
-function Joke(props) {
-  return (
-    <div className="joke">
-      <img alt={props.name} src={props.imgURL} />
-      <h3>Piada do {props.name}</h3>
-      <p style={{ display: props.question ? 'block' : 'none' }}>
-        {props.question}
-      </p>
-      <p style={{ color: !props.question ? '#FF6600' : '#000' }}>
-        {props.punchline}
-      </p>
-      <p>
-        <input type="checkbox" onChange={sadCat} checked={props.funy} />
-        <label>Achei Engraçado {props.name}</label>
-      </p>
-    </div>
-  );
-}
-
 export default Joke;
