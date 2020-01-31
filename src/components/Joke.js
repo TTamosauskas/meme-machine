@@ -1,5 +1,13 @@
 import React from 'react';
 
+function sadCat() {
+  alert('oi');
+}
+
+function meAmar() {
+  alert('Tem que me amar!');
+}
+
 function Joke(props) {
   return (
     <div className="joke">
@@ -12,7 +20,7 @@ function Joke(props) {
         {props.punchline}
       </p>
       <p>
-        <input type="checkbox" checked={props.funy} />
+        <input type="checkbox" onChange={sadCat} checked={props.funy} />
         <label>Achei Engraçado {props.name}</label>
       </p>
     </div>
