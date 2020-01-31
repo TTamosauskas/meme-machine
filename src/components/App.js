@@ -1,26 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Header from './Header';
+import NavBar from './NavBar';
+import MainContent from './MainContent';
+import Footer from './Footer';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'Tamosauskas',
-      age: '38',
-      isLoggedIn: false,
-    };
-  }
-
-  render() {
-    return (
-      <>
-        <div>
-          <h1>{this.state.name}</h1>
-          <p>{this.state.age} de idade</p>
-          <p>Você está {this.state.isLoggedIn ? 'logado' : 'deslogado'}</p>
-        </div>
-      </>
-    );
-  }
+function App() {
+  return (
+    <>
+      <Header />
+      <NavBar />
+      <MainContent />
+      <Footer />
+    </>
+  );
 }
-
 export default App;
