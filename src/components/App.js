@@ -1,19 +1,23 @@
-import React from 'react';
-import Header from './Header';
-import NavBar from './NavBar';
-import MainContent from './MainContent';
-import Footer from './Footer';
+import React, { Component } from 'react';
 
-class App extends React.Component {
-  yourMethodHere() {}
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: 'Tamosauskas',
+      age: '38',
+      isLoggedIn: false,
+    };
+  }
 
   render() {
     return (
       <>
-        <Header />
-        <NavBar />
-        <MainContent />
-        <Footer />
+        <div>
+          <h1>{this.state.name}</h1>
+          <p>{this.state.age} de idade</p>
+          <p>Você está {this.state.isLoggedIn ? 'logado' : 'deslogado'}</p>
+        </div>
       </>
     );
   }
