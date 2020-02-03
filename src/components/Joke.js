@@ -18,7 +18,7 @@ class Joke extends Component {
       <div className="joke">
         <img
           alt={this.props.name}
-          width="100%"
+          height="300px"
           src={
             this.props.funy
               ? this.props.imgURL
