@@ -16,7 +16,15 @@ class Joke extends Component {
   render() {
     return (
       <div className="joke">
-        <img alt={this.props.name} src={this.props.imgURL} />
+        <img
+          alt={this.props.name}
+          width="100%"
+          src={
+            this.props.funy
+              ? this.props.imgURL
+              : 'https://static.glamurama.uol.com.br/2020/01/meowmeow.jpg'
+          }
+        />
         <h3>Piada do {this.props.name}</h3>
         <p style={{ display: this.props.question ? 'block' : 'none' }}>
           {this.props.question}
