@@ -14,8 +14,9 @@ class MainContent extends Component {
   handleChange(id) {
     this.setState(prevState => {
       const updatedJokes = prevState.jokes.map(joke => {
-        if (joke.id === id) {
+        if (joke.name === id) {
           joke.funy = !joke.funy;
+          joke.likes += 1;
         }
         return joke;
       });
@@ -35,6 +36,7 @@ class MainContent extends Component {
         question={joke.question}
         punchline={joke.punchline}
         funy={joke.funy}
+        likes={joke.likes}
       />
     ));
     return (
