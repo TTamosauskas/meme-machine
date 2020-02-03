@@ -8,6 +8,21 @@ class MainContent extends Component {
     this.state = {
       jokes: jokesData,
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(id) {
+    this.setState(prevState => {
+      const updatedJokes = prevState.jokes.map(joke => {
+        if (joke.id === id) {
+          joke.funy = !joke.funy;
+        }
+        return joke;
+      });
+      return {
+        jokes: updatedJokes,
+      };
+    });
   }
 
   render() {
@@ -15,6 +30,7 @@ class MainContent extends Component {
       <Joke
         key={joke.id}
         name={joke.name}
+        handleChange={this.handleChange}
         imgURL={joke.imgURL}
         question={joke.question}
         punchline={joke.punchline}

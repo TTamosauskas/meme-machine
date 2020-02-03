@@ -32,7 +32,7 @@ class Joke extends Component {
         <p>
           <input
             type="checkbox"
-            onChange={this.handleClick}
+            onChange={() => this.props.handleChange(this.props.funy)}
             checked={this.props.funy}
           />
           <label>Achei Engraçado {this.props.name}</label>
