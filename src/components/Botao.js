@@ -6,8 +6,6 @@ class Botao extends Component {
     super();
     this.state = {
       isLoggedIn: false,
-      buttonText: 'Log In',
-      displayText: 'Logged out',
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -24,12 +22,12 @@ class Botao extends Component {
     const buttonText = this.state.isLoggedIn ? 'LOG OUT' : 'LOG IN';
     const displayText = this.state.isLoggedIn ? 'Logged in' : 'Logged out';
     return (
-      <>
+      <div className="botao">
         <Button variant="dark" onClick={this.handleClick}>
           {buttonText}
         </Button>
-        <h3>{displayText}</h3>
-      </>
+        <h5>{displayText}</h5>
+      </div>
     );
   }
 }
