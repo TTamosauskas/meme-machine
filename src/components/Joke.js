@@ -25,22 +25,24 @@ class Joke extends Component {
               : 'https://static.glamurama.uol.com.br/2020/01/meowmeow.jpg'
           }
         />
-        <h3>Piada do {this.props.name}</h3>
-        <p style={{ display: this.props.question ? 'block' : 'none' }}>
-          {this.props.question}
-        </p>
-        <p style={{ color: !this.props.question ? '#FF6600' : '#000' }}>
-          {this.props.punchline}
-        </p>
-        <p>{this.props.likes} likes</p>
-        <p>
-          <input
-            type="checkbox"
-            onChange={() => this.props.handleChange(this.props.name)}
-            checked={this.props.funy}
-          />
-          <label>Achei Engraçado {this.props.name}</label>
-        </p>
+        <div className="infocat">
+          <h3>Piada do {this.props.name}</h3>
+          <p style={{ display: this.props.question ? 'block' : 'none' }}>
+            {this.props.question}
+          </p>
+          <p style={{ color: !this.props.question ? '#FF6600' : '#000' }}>
+            {this.props.punchline}
+          </p>
+          <p>{this.props.likes} likes</p>
+          <p>
+            <input
+              type="checkbox"
+              onChange={() => this.props.handleChange(this.props.name)}
+              checked={this.props.funy}
+            />
+            <label>Achei Engraçado {this.props.name}</label>
+          </p>
+        </div>
       </div>
     );
   }

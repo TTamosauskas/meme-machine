@@ -40,7 +40,7 @@ code {
 
   .joke {
     align-items:center;
-    padding:30px 20px 0;
+    padding:0;
     width:30%;
     overflow: hidden;
     border:1px solid #cecece;
@@ -55,6 +55,8 @@ code {
     flex-shrink: 1;
 flex-basis: auto;
   }
+
+  .infocat {padding:5px;}
 
   input[type=checkbox]{
     margin-right: 10px;
