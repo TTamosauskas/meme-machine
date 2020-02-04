@@ -21,12 +21,21 @@ class Botao extends Component {
   render() {
     const buttonText = this.state.isLoggedIn ? 'LOG OUT' : 'LOG IN';
     const displayText = this.state.isLoggedIn ? 'Logged in' : 'Logged out';
+
+    const areaButton = {
+      position: 'absolute',
+      top: 5,
+      right: 5,
+    };
+
+    const paragrafo = { color: '#fff' };
+
     return (
-      <div className="botao">
+      <div style={areaButton}>
         <Button variant="dark" onClick={this.handleClick}>
           {buttonText}
         </Button>
-        <h5>{displayText}</h5>
+        <p style={paragrafo}>{displayText}</p>
       </div>
     );
   }

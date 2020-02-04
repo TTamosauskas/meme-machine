@@ -1,9 +1,7 @@
-import React from "react"
+import React from 'react';
 
-function Header(){
-return (
-  <header className="headertitle">Titulo</header>
-)
+function Header() {
+  return <header className="headertitle">Adote um gato piadista</header>;
 }
 
-export default Header
+export default Header;
