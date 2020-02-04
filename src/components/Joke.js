@@ -24,6 +24,7 @@ class Joke extends Component {
               ? this.props.imgURL
               : 'https://static.glamurama.uol.com.br/2020/01/meowmeow.jpg'
           }
+          className={this.props.funy ? 'piadaboa' : 'piadaruim'}
         />
         <div className="infocat">
           <h3>Piada do {this.props.name}</h3>
