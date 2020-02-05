@@ -4,6 +4,7 @@ import Botao from './Botao';
 import NavBar from './NavBar';
 import MainContent from './MainContent';
 import Footer from './Footer';
+import Fetch from './Fetch';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       />{' '}
       <Header />
       <Botao />
+      <Fetch />
       <NavBar />
       <MainContent />
       <Footer />
