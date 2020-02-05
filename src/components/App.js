@@ -5,16 +5,19 @@ import NavBar from './NavBar';
 import MainContent from './MainContent';
 import Footer from './Footer';
 import Fetch from './Fetch';
+import Form from './Form';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <>
       <Header />
       <Botao />
-      <Fetch />
+      <Form />
       <NavBar />
       <MainContent />
       <Footer />
+      <Fetch />
     </>
   );
 }

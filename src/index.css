@@ -73,3 +73,5 @@ flex-basis: auto;
   input[type=checkbox]:focus{
     outline:0;
   }
+
+  .formulario {text-align:center;}
