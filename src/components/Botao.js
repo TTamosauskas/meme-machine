@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Botao extends Component {
   constructor() {
@@ -31,9 +33,9 @@ class Botao extends Component {
 
     return (
       <div style={areaButton}>
-        <button variant="dark" onClick={this.handleClick}>
+        <Button variant="dark" onClick={this.handleClick}>
           {buttonText}
-        </button>
+        </Button>
         <p style={paragrafo}>{displayText}</p>
       </div>
     );
