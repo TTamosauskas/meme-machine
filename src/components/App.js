@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 import MainContent from './MainContent';
 import Footer from './Footer';
 import Fetch from './Fetch';
-import Travel from './Travel';
+import TravelContainer from './TravelContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <>
       <Header />
       <Botao />
-      <Travel />
+      <TravelContainer />
       <NavBar />
       <MainContent />
       <Footer />
