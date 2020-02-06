@@ -74,4 +74,15 @@ flex-basis: auto;
     outline:0;
   }
 
-  .formulario {text-align:center;}
+  .formulario {text-align:center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width:60%;
+    margin:auto;
+ 
+  }
+
+  .formulario label{
+    text-align:left;
+  }
