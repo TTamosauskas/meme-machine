@@ -4,19 +4,15 @@ import jokesData from './jokesData';
 class Footer extends Component {
   constructor() {
     super();
-    this.state = {
-      jokes: jokesData,
-    };
+    this.state = {};
   }
 
   render() {
     return (
       <>
-        {this.state.jokes.length > 0 && (
-          <footer>
-            <h3>Hoje foram {this.state.jokes.length} piadinhas</h3>
-          </footer>
-        )}
+        <footer>
+          <h6>Meme Machine inc.</h6>
+        </footer>
       </>
     );
   }

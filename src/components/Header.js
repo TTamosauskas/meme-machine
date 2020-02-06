@@ -1,7 +1,11 @@
 import React from 'react';
 
 function Header() {
-  return <header className="headertitle">Adote um gato piadista</header>;
+  return (
+    <header>
+      <h1>The Meme Machine</h1>
+    </header>
+  );
 }
 
 export default Header;
