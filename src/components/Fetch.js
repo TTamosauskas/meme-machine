@@ -15,6 +15,18 @@ class Fetch extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
+
+   // fetch(MemeData)
+    //  .then(response => response.json())
+     // .then(response => {
+     //   const { memes } = response.data;
+    //    console.log(memes[0]);
+    //    this.setState({ allMemeImages: memes });
+   //   });
+  //}
+
+  componentDidMount() {
+    this.setState({ loading: true });
     fetch('https://swapi.co/api/people/1/')
       .then(response => response.json())
       .then(data => {

@@ -1,10 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: whitesmoke;
 }
 
@@ -30,10 +28,20 @@ header > h1 {
 
 main {  text-align:center;}
 
-.meme {position:relative; width: 90%; margin: auto;}
+.meme {position:relative; width: 60%; margin: auto;}
 
 .meme > img {width: 100%;}
 
-.meme . h2 {position: relative;}
+.meme h2 {
+  width:100%;
+  color: black;
+  font-family: 'Anton', sans-serif;
 
-footer {text-align:center;color:gray;font-size:10px;}
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  font-size: 50px;
+  position: absolute;text-align:center;color:white;text-transform: uppercase;}
+  
+
+.meme h2.top {top:0;}
+
+.meme h2.bottom {bottom:0;}
