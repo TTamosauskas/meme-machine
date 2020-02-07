@@ -18,12 +18,10 @@ header {
   text-align:center;
   }
 
-header > img {height:88%; margin-left:10%}
   
 header > h1 {
   color: whitesmoke;
   font-size: 50px;
-  margin-left:60px;
 }
 
 main {  text-align:center;}
