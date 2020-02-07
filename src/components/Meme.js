@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import html2canvas from 'html2canvas';
 
 class Meme extends Component {
   state = {
@@ -17,6 +18,11 @@ class Meme extends Component {
         console.log(memes[1]);
         this.setState({ allMemeImages: memes });
       });
+
+    // const c = document.getElementById('myCanvas');
+    // const ctx = c.getContext('2d');
+    //  const img = document.getElementById('memeIMG');
+    //  ctx.drawImage(img, 10, 10);
   }
 
   handleChange = event => {
@@ -30,6 +36,13 @@ class Meme extends Component {
     const randMemeImg = this.state.allMemeImages[randNum].url;
     this.setState({ randomImg: randMemeImg });
   };
+
+  // handleCanvas = event => {
+  //   event.preventDefault();
+  //  html2canvas(document.querySelector('.meme')).then(canvas => {
+  //     document.body.appendChild(canvas);
+  //   });
+  // };
 
   render() {
     return (
@@ -56,8 +69,9 @@ class Meme extends Component {
             </label>
             <button>Sortear Meme</button>
           </form>
+
           <div className="meme">
-            <img src={this.state.randomImg} alt="" />
+            <img src={this.state.randomImg} />
             <h2 className="top">{this.state.topText}</h2>
             <h2 className="bottom">{this.state.bottomText}</h2>
           </div>
