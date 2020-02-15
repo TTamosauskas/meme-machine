@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <header>
-      <h1>The Meme Machine</h1>
+      <h1>Memes Against Humanity</h1>
     </header>
   );
 }

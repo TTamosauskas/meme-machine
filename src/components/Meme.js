@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import BlackCardsData from './BlackCardsData';
+import WhiteCardsData from './WhiteCardsData';
 
 class Meme extends Component {
   state = {
-    topText: '',
-    bottomText: '',
+    topText: 'Memes',
+    bottomText: 'Against Humanity',
     randomImg: 'https://i.imgflip.com/1ur9b0.jpg',
     allMemeImages: [],
+    blackcards: BlackCardsData,
+    whitecards: WhiteCardsData,
   };
 
   componentDidMount() {
@@ -29,32 +33,25 @@ class Meme extends Component {
     const randNum = Math.floor(Math.random() * this.state.allMemeImages.length);
     const randMemeImg = this.state.allMemeImages[randNum].url;
     this.setState({ randomImg: randMemeImg });
+
+    const blackcardComponent = this.state.blackcards.map(card => card);
+    const randNum2 = Math.floor(Math.random() * blackcardComponent.length);
+    const randCard = blackcardComponent[randNum2].text;
+    this.setState({ topText: randCard });
+
+    const whitecardComponent = this.state.whitecards.map(card => card);
+    const randNum3 = Math.floor(Math.random() * whitecardComponent.length);
+    const randCard3 = whitecardComponent[randNum3];
+    this.setState({ bottomText: randCard3 });
   };
 
   render() {
     return (
       <>
         <main>
+          <h1>{this.state.randCard}</h1>
           <form className="meme-form" onSubmit={this.handleSubmit}>
-            <label>
-              <input
-                type="text"
-                name="topText"
-                value={this.state.topText}
-                placeholder="Texto do topo"
-                onChange={this.handleChange}
-              />
-            </label>
-            <label>
-              <input
-                type="text"
-                name="bottomText"
-                value={this.state.bottomText}
-                placeholder="Texto do fundo"
-                onChange={this.handleChange}
-              />
-            </label>
-            <button>Sortear Meme</button>
+            <button>TRY YOUR LUCK</button>
           </form>
           <div className="meme">
             <img src={this.state.randomImg} alt="" />
