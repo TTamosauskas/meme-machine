@@ -1,4 +1,4 @@
-Memes Agains Humanity
+Memes Against Humanity
 =======================
 
 It has never been so easy to fell offended
